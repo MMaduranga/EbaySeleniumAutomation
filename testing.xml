@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Ebay Shopping Cart Test Suite">
+    <test name="Ebay Shopping Cart Test">
+        <parameter name="url" value="https://www.ebay.com/" />
+        <classes>
+            <class name="Test_Cases.EbayTest" />
+        </classes>
+    </test>
+</suite>
+
