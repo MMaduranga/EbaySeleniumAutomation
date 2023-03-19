@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <parameter name="url" value="https://www.ebay.com/"></parameter>
+    <test name="chromeTest">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="Test_Cases.MainWindow">
+                <methods>
+                    <include name="navigateToEbay"/>
+                    <include name="searchForMobilePhone"/>
+                    <include name="filterByBrand"/>
+                </methods>
+            </class>
+            <class name="Test_Cases.SecondaryWindow">
+                <methods>
+                    <include name="selectProductOptions"/>
+                    <include name="productName"/>
+                    <include name="addCart"/>
+                    <include name="assertShoppingCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="edgeTest">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="Test_Cases.MainWindowEdge">
+                <methods>
+                    <include name="navigateToEbay"/>
+                    <include name="searchForMobilePhone"/>
+                    <include name="filterByBrand"/>
+                </methods>
+            </class>
+            <class name="Test_Cases.SecondaryWindowEdge">
+                <methods>
+                    <include name="selectProductOptions"/>
+                    <include name="productName"/>
+                    <include name="addCart"/>
+                    <include name="assertShoppingCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
